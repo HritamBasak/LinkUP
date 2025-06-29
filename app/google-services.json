@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "765541204698",
+    "project_id": "guardify-f046b",
+    "storage_bucket": "guardify-f046b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765541204698:android:fc7edd926a59502b811be3",
+        "android_client_info": {
+          "package_name": "com.example.guardify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqBP1xiMkyGCv3e4IOYQp_9oFXW3vV1CM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
