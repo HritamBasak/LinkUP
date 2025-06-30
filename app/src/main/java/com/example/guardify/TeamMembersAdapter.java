@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
@@ -42,9 +41,16 @@ public class TeamMembersAdapter extends RecyclerView.Adapter<TeamMembersAdapter.
                 .addOnSuccessListener(doc -> {
                     if (doc.exists()) {
                         String name = doc.getString("name");
-                        String email = doc.getString("email");
+                        List<String> skillsList = (List<String>) doc.get("skills");
+
                         holder.tvName.setText(name != null ? name : "Unnamed");
-                        holder.tvEmail.setText(email != null ? email : "No email");
+
+                        if (skillsList != null && !skillsList.isEmpty()) {
+                            holder.tvSkills.setText("Skills: " + String.join(", ", skillsList));
+                        } else {
+                            holder.tvSkills.setText("Skills: N/A");
+                        }
+
                     }
                 });
     }
@@ -55,12 +61,12 @@ public class TeamMembersAdapter extends RecyclerView.Adapter<TeamMembersAdapter.
     }
 
     public static class MemberViewHolder extends RecyclerView.ViewHolder {
-        TextView tvName, tvEmail;
+        TextView tvName, tvSkills;
 
         public MemberViewHolder(@NonNull View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.tvMemberName);
-            tvEmail = itemView.findViewById(R.id.tvMemberEmail);
+            tvSkills = itemView.findViewById(R.id.tvSkills);
         }
     }
 }

@@ -13,20 +13,19 @@
 
         <!-- Icon with shadow -->
         <androidx.cardview.widget.CardView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginBottom="12dp"
             app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/prof"
                 android:contentDescription="Profile Icon"
-                 />
+                android:src="@drawable/prof" />
         </androidx.cardview.widget.CardView>
 
         <!-- Title -->

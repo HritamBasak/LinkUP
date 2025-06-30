@@ -88,7 +88,6 @@ public class ProfileSetupActivity extends AppCompatActivity {
                     Toast.makeText(this, "Profile Saved", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(ProfileSetupActivity.this, HomeActivity.class);
                     startActivity(intent);
-                    finish();
                 })
                 .addOnFailureListener(e ->
                         Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show());

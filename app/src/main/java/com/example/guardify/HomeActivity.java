@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
@@ -21,8 +22,10 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -67,12 +70,10 @@ public class HomeActivity extends AppCompatActivity {
                 binding.drawerLayout.closeDrawers();
                 return true;
            } else if (id == R.id.feedbackfragment) {
-                startActivity(new Intent(HomeActivity.this, FeedbackActivity.class));
-                finish(); // Optional, only if you don't want to keep HomeActivity in stack
+                startActivity(new Intent(HomeActivity.this, FeedbackActivity.class));// Optional, only if you don't want to keep HomeActivity in stack
                 return true;
             } else if (id == R.id.morefragment) {
                 startActivity(new Intent(HomeActivity.this, MoreActivity.class));
-                finish();
                 return true;
             }
             else if (id == R.id.shareFragment) {
@@ -99,7 +100,7 @@ public class HomeActivity extends AppCompatActivity {
         // Setup Toolbar
         Toolbar toolbar = binding.appBarHome.toolbar;
         setSupportActionBar(toolbar);
-        toolbar.setTitle("SkillBridge");
+        toolbar.setTitle("LinkUp");
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -135,7 +136,6 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(HomeActivity.this, ProfileSetupActivity.class);
             intent.putExtra("editMode", true);
             startActivity(intent);
-            finish();
         });
 
         loadUserData();
@@ -220,6 +220,8 @@ public class HomeActivity extends AppCompatActivity {
                 .addOnFailureListener(e ->
                         Toast.makeText(this, "Failed to load profile", Toast.LENGTH_SHORT).show());
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

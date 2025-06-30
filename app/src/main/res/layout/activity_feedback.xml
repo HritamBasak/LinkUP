@@ -31,7 +31,7 @@
 
         <!-- Subheader in a card -->
         <androidx.cardview.widget.CardView
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
