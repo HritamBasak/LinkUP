@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:icon="@drawable/home"
+            android:title="Home"
+            android:menuCategory="secondary"
+            android:actionLayout="@layout/fragment_home"/>
+
     </group>
+    <item android:title="Communication"
+        android:menuCategory="secondary">
+        <menu>
+            <item
+                android:id="@+id/feedbackfragment"
+                android:icon="@drawable/review"
+                android:title="FeedBack"
+                android:menuCategory="secondary"
+                android:actionLayout="@layout/activity_feedback"/>
+            <item
+                android:id="@+id/shareFragment"
+                android:icon="@drawable/share"
+                android:title="Share"
+                android:menuCategory="secondary"
+                android:actionLayout="@layout/activity_share_fragemnt"/>
+
+        </menu>
+    </item>
+    <item android:title="Others"
+        android:menuCategory="secondary">
+        <menu>
+            <item
+                android:id="@+id/signOutfragment"
+                android:icon="@drawable/logout"
+                android:title="SignOut"
+                android:menuCategory="secondary"
+                android:actionLayout="@layout/fragment_slideshow"/>
+            <item
+                android:id="@+id/morefragment"
+                android:icon="@drawable/plus"
+                android:actionLayout="@layout/activity_more"
+                android:menuCategory="secondary"
+                android:title="More" />
+
+        </menu>
+
+
+    </item>
 </menu>

@@ -33,9 +33,10 @@
                 android:id="@+id/tvSentMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Message"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:text="Message" />
+                android:textIsSelectable="true"
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

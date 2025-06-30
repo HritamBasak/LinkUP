@@ -1,7 +1,9 @@
 package com.example.guardify;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -140,4 +142,5 @@ public class ChatActivity extends AppCompatActivity {
         onBackPressed();
         return true;
     }
+
 }

@@ -3,6 +3,7 @@ package com.example.guardify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,15 +14,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.guardify.ui.Team;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
 
 public class TeamDetailsActivity extends AppCompatActivity {
 
     private TextView tvTeamName, tvTeamDescription, tvCreatedBy;
     private RecyclerView memberRecyclerView;
     private MaterialButton btnLeaveTeam;
+
 
     private FirebaseAuth auth;
     private FirebaseFirestore db;
@@ -52,6 +58,7 @@ public class TeamDetailsActivity extends AppCompatActivity {
         memberRecyclerView = findViewById(R.id.memberRecyclerView);
         btnLeaveTeam = findViewById(R.id.btnLeaveTeam);
 
+
         memberRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         findViewById(R.id.btnChat).setOnClickListener(v -> {
@@ -63,6 +70,9 @@ public class TeamDetailsActivity extends AppCompatActivity {
 
         loadTeamDetails();
     }
+
+
+
 
     private void loadTeamDetails() {
         db.collection("teams").document(teamId).get()

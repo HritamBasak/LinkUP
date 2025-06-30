@@ -66,15 +66,29 @@ public class HomeActivity extends AppCompatActivity {
                 // Already in HomeActivity, maybe close drawer
                 binding.drawerLayout.closeDrawers();
                 return true;
-           } //else if (id == R.id.nav_gallery) {
-//                startActivity(new Intent(HomeActivity.this, GalleryActivity.class));
-//                finish(); // Optional, only if you don't want to keep HomeActivity in stack
-//                return true;
-//            } else if (id == R.id.nav_slideshow) {
-//                startActivity(new Intent(HomeActivity.this, SlideshowActivity.class));
-//                finish();
-//                return true;
-//            }
+           } else if (id == R.id.feedbackfragment) {
+                startActivity(new Intent(HomeActivity.this, FeedbackActivity.class));
+                finish(); // Optional, only if you don't want to keep HomeActivity in stack
+                return true;
+            } else if (id == R.id.morefragment) {
+                startActivity(new Intent(HomeActivity.this, MoreActivity.class));
+                finish();
+                return true;
+            }
+            else if (id == R.id.shareFragment) {
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                String shareMessage = "Check out this amazing app SkillBridge!\n\nDownload now: https://play.google.com/store/apps/details?id=" + getPackageName();
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                startActivity(Intent.createChooser(shareIntent, "Share SkillBridge via"));
+                return true;
+            }
+            else if(id == R.id.signOutfragment){
+                auth.signOut();
+                startActivity(new Intent(HomeActivity.this, SignUpActivity.class));
+                finish();
+                return true;
+            }
 
             binding.drawerLayout.closeDrawer(binding.navView); // Close drawer after selection
             return true;

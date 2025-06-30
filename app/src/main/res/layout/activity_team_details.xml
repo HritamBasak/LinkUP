@@ -1,131 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    android:id="@+id/activityTeamDetails"
     android:background="@color/background_light">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:padding="20dp">
 
-        <!-- Team Info Card -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="20dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp">
+            android:orientation="vertical"
+            android:padding="5dp">
 
-            <LinearLayout
-                android:layout_width="350dp"
+            <!-- Team Info Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp">
 
-                <TextView
-                    android:id="@+id/tvTeamName"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="Team Name"
-                    android:textColor="@color/black"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
-                <TextView
-                    android:id="@+id/tvTeamDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="Team Description"
-                    android:textColor="@color/black"
-                    android:textSize="13sp" />
+                    <TextView
+                        android:id="@+id/tvTeamName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Team Name"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tvCreatedBy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Created By: John Doe"
-                    android:textColor="#777777"
-                    android:textSize="14sp" />
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvTeamDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Team Description"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
 
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/tvCreatedBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Created By: John Doe"
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        <!-- Members List Heading -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Team Members:"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- RecyclerView for members -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/memberRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:background="@android:color/white"
-            android:clipToPadding="false"
-            android:nestedScrollingEnabled="false"
-            android:padding="8dp" />
-
-        <!-- Leave Team Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLeaveTeam"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
-            android:text="Leave Team"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            app:cornerRadius="12dp"
-            app:iconPadding="8dp"
-            app:iconTint="@android:color/white" />
-
-        <ImageView
-            android:id="@+id/btnChat"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:padding="5dp"
-            app:srcCompat="@drawable/chat" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="16dp"
-            android:elevation="8dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="16dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnSummarizeChat"
+            <!-- Members List Heading -->
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Team Members:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- RecyclerView for members -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/memberRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@android:color/white"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:padding="8dp" />
+
+            <!-- Leave Team Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLeaveTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                android:elevation="0dp"
-                android:text="Summarize Chat"
+                android:text="Leave Team"
+                android:textAllCaps="false"
                 android:textColor="@android:color/white"
-                app:cornerRadius="12dp" />
-        </androidx.cardview.widget.CardView>
+                android:textSize="16sp"
+                app:cornerRadius="12dp"
+                app:iconPadding="8dp"
+                app:iconTint="@android:color/white" />
 
+            <!-- Chat Button Centered -->
+            <ImageView
+                android:id="@+id/btnChat"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="80dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/chat" />
+        </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
-</ScrollView>
+    <!-- Invite Friend FAB at Bottom-Right -->
+</FrameLayout>
