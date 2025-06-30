@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation (libs.hdodenhof.circleimageview)
     implementation (libs.glide)
+    implementation (libs.volley)
 
 // Testing
     testImplementation(libs.junit)
