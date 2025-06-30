@@ -1,5 +1,7 @@
 package com.example.guardify;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +29,7 @@ public class TeamDetailsActivity extends AppCompatActivity {
     private Team team;
     private TeamMembersAdapter membersAdapter;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +53,13 @@ public class TeamDetailsActivity extends AppCompatActivity {
         btnLeaveTeam = findViewById(R.id.btnLeaveTeam);
 
         memberRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        findViewById(R.id.btnChat).setOnClickListener(v -> {
+            Intent intent = new Intent(TeamDetailsActivity.this, ChatActivity.class);
+            intent.putExtra("teamId", teamId);  // pass team ID
+            startActivity(intent);
+        });
+
 
         loadTeamDetails();
     }

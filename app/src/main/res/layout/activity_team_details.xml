@@ -59,6 +59,7 @@
                     android:textColor="#777777"
                     android:textSize="14sp" />
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- Members List Heading -->
@@ -66,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="Team Members"
+            android:text="Team Members:"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -95,6 +96,15 @@
             app:cornerRadius="12dp"
             app:iconPadding="8dp"
             app:iconTint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/btnChat"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            app:srcCompat="@drawable/chat" />
+
 
     </LinearLayout>
 </ScrollView>
