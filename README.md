@@ -14,8 +14,6 @@ Unlike traditional chat apps like WhatsApp or Slack where only known users can b
 - 🌐 **Open Team Discovery** – Browse and join any team, no invitations required.
 - 💬 **Real-Time Team Chat** – Members can send and receive messages in real-time.
 - 👥 **Member Listing** – View all team members with names and skillsets.
-- ➕ **Invite Feature (Coming Soon)** – Send team invites to friends via email.
-- 👁️‍🗨️ **Read Receipts (Planned)** – Know when your messages are seen.
 - 🚪 **Leave Team Option** – Users can leave teams anytime.
 - ✨ **Beautiful UI** – Professional Material Design UI using ConstraintLayout, CardView, and Toolbar.
 
@@ -23,13 +21,7 @@ Unlike traditional chat apps like WhatsApp or Slack where only known users can b
 
 ## 📱 Screenshots
 
-![Screenshot_20250701_013514](https://github.com/user-attachments/assets/62564feb-4703-45b0-9328-eeb31de67a6b)
-![Screenshot_20250701_013813](https://github.com/user-attachments/assets/eb23b880-a9d3-4bcf-9fd7-55d448237ee5)
-![Screenshot_20250701_013835](https://github.com/user-attachments/assets/7dfc3c22-7f83-4ed3-a222-19998ffa4424)
-![Screenshot_20250701_013556](https://github.com/user-attachments/assets/cbea891c-24e9-452b-8156-00e8fca39cdc)
-![Screenshot_20250701_013754](https://github.com/user-attachments/assets/ce220d43-c9bd-4d60-87b1-f093d8e25c46)
-![Screenshot_20250701_013634](https://github.com/user-attachments/assets/262e109f-5bce-4bc8-96a1-9e060f7c0710)
-![Screenshot_20250701_013730](https://github.com/user-attachments/assets/c9c91d3c-83a5-4a16-8df0-f1820c776a13)
+<div align="center"> <img src="https://github.com/user-attachments/assets/62564feb-4703-45b0-9328-eeb31de67a6b" width="300"/> <img src="https://github.com/user-attachments/assets/eb23b880-a9d3-4bcf-9fd7-55d448237ee5" width="300"/> <img src="https://github.com/user-attachments/assets/7dfc3c22-7f83-4ed3-a222-19998ffa4424" width="300"/> <br/> <img src="https://github.com/user-attachments/assets/cbea891c-24e9-452b-8156-00e8fca39cdc" width="300"/> <img src="https://github.com/user-attachments/assets/ce220d43-c9bd-4d60-87b1-f093d8e25c46" width="300"/> <img src="https://github.com/user-attachments/assets/262e109f-5bce-4bc8-96a1-9e060f7c0710" width="300"/> <img src="https://github.com/user-attachments/assets/c9c91d3c-83a5-4a16-8df0-f1820c776a13" width="300"/> </div>
 
 ---
 
@@ -38,7 +30,7 @@ Unlike traditional chat apps like WhatsApp or Slack where only known users can b
 - **Languages**: Java, XML
 - **UI**: Material Design, ConstraintLayout, RecyclerView, CardView
 - **Backend**: Firebase Authentication, Cloud Firestore
-- **Libraries/Tools**: Glide, AlertDialog, FirebaseUI, Google Material Components
+- **Libraries/Tools**: RecyclerView, CardView, AlertDialog, FirebaseUI, Google Material Components, SnapShotListeners, Intent Navigation
 - **IDE**: Android Studio
 
 ---
@@ -80,7 +72,7 @@ LinkUp/
 
 --
 
-📊 Impact
+## 📊 Impact
 • 📈 Over 100+ installs via internal circulation and college demo.
 
 • 🔗 Boosted team-building across diverse users who had no prior connection.
@@ -89,7 +81,7 @@ LinkUp/
 
 --
 
-💡 Highlights
+## 💡 Highlights
 • 🌍 Open Collaboration: Anyone can see, join, or chat in relevant teams.
 
 • 🔁 Reusable Components: Used adapters and modular architecture across screens.
@@ -100,7 +92,7 @@ LinkUp/
 
 --
 
-🙋‍♂️ Developer
+## 🙋‍♂️ Developer
 Hritam Basak
 📧 hritambasak2005@gmail.com
 🔗 Portfolio • LinkedIn • GitHub
