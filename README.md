@@ -95,6 +95,6 @@ LinkUp/
 ## 🙋‍♂️ Developer
 Hritam Basak
 📧 hritambasak2005@gmail.com
-🔗 Portfolio • LinkedIn • GitHub
+
 
 
