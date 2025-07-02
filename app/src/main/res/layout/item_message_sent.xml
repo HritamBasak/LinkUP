@@ -18,8 +18,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="280dp"
         android:elevation="6dp"
+        android:maxWidth="280dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/black">
 
@@ -33,6 +33,7 @@
                 android:id="@+id/tvSentMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxWidth="280dp"
                 android:text="Message"
                 android:textColor="@android:color/white"
                 android:textIsSelectable="true"

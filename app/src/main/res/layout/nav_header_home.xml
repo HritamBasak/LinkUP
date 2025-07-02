@@ -40,23 +40,26 @@
 
     <TextView
         android:id="@+id/navHeaderBio"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:paddingTop="4dp"
         android:text="Short Bio goes here"
         android:textColor="#FFFFFF"
-        android:textSize="13sp" />
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/navHeaderSkills"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:paddingTop="2dp"
-        android:text="Skills: Java, Firebase, XML"
+        android:text="Skills: Java, Firebase, XML, Android, XML, Retrofit, Room, Architecture Components, DataBinding, LiveData, and more"
         android:textColor="#FFFFFF"
-        android:textSize="13sp" />
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textAlignment="center" />
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/editCard"

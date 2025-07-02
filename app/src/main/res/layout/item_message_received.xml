@@ -18,7 +18,6 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="280dp"
         android:elevation="6dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/light_grey">
@@ -33,6 +32,7 @@
                 android:id="@+id/tvReceivedMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxWidth="280dp"
                 android:text="Incoming message"
                 android:textColor="@android:color/black"
                 android:textIsSelectable="true"

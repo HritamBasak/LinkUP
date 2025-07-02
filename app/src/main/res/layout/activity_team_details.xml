@@ -41,6 +41,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
                         android:text="Team Name"
+                        android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -50,7 +51,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
+                        android:gravity="center"
                         android:text="Team Description"
+                        android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="13sp" />
 
@@ -59,6 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Created By: John Doe"
+                        android:textAlignment="center"
                         android:textColor="#777777"
                         android:textSize="14sp" />
                 </LinearLayout>

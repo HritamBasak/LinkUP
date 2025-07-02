@@ -45,7 +45,7 @@ public class MoreActivity extends AppCompatActivity {
         share.setOnClickListener(v -> {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
-            String shareMessage = "Check out this amazing app SkillBridge!\n\nDownload now: https://play.google.com/store/apps/details?id=" + getPackageName();
+            String shareMessage = "Check out this amazing app LinkUp!\n\nDownload now: https://github.com/HritamBasak/LinkUP/commit/6bfd79ae5c7e1696d66c34b3930fa030d4c7b486" + getPackageName();
             shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
             startActivity(Intent.createChooser(shareIntent, "Share SkillBridge via"));
         });
